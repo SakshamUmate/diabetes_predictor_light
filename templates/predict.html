@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% block title %}Predictor{% endblock %}
+
+{% block content %}
+<form class="container" method="post" action="/predict">
+    {% if result== 1 %}
+    <h2 style="color: red;">Patient  have Diabetes </h2>
+    {% elif result==0 %}
+    <h2 style="color: blue;">Patient  do not have Diabetes </h2>
+    {% else %}
+    <h2>Enter the details to predict</h2>
+    {% endif %}
+
+    <br>
+    <div class="form-group">
+        <label for="Pregnancies">Pregnancies :</label>
+        <input type="text" class="form-control" id="Pregnancies" name="Pregnancies">
+    </div>
+    <div class="form-group">
+        <label for="Glucose">Glucose :</label>
+        <input type="text" class="form-control" id="Glucose" name="Glucose">
+    </div>
+    <div class="form-group">
+        <label for="BloodPressure">BloodPressure :</label>
+        <input type="text" class="form-control" id="BloodPressure" name="BloodPressure">
+
+    </div>
+    <div class="form-group">
+        <label for="SkinThickness">SkinThickness :</label>
+        <input type="text" class="form-control" id="SkinThickness" name="SkinThickness">
+
+    </div>
+    <div class="form-group">
+        <label for="Insulin">Insulin :</label>
+        <input type="text" class="form-control" id="Insulin" name="Insulin">
+
+    </div>
+    <div class="form-group">
+        <label for="BMI">BMI :</label>
+        <input type="text" class="form-control" id="BMI" name="BMI">
+    </div>  
+    <div class="form-group">
+        <label for="DiabetesPedigreeFunction">DiabetesPedigreeFunction :</label>
+        <input type="text" class="form-control" id="DiabetesPedigreeFunction" name="DiabetesPedigreeFunction">
+    </div>
+    <div class="form-group">
+        <label for="Age">Age :</label>
+        <input type="text" class="form-control" id="Age" name="Age">
+    </div>
+    <button type="submit" class="btn btn-primary ">Predict:</button>
+    
+        
+</form>
+
+
+{% endblock %}
+
+
+
+
+
+
+
+

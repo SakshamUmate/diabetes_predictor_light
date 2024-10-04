@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}Login{% endblock %}
+
+{% block content %}
+
+<form class="container" method="post" action="{{url_for('login')}}">
+    <h2>Login here</h2>
+    <br>
+    <div class="form-group">
+        <label for="username">Email:</label>
+        <input type="text" class="form-control" id="username" name="username">
+    </div>
+    <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" class="form-control" id="password" name="password">
+    </div>
+    <button type="submit" class="btn btn-primary">Login</button>
+    <a href="{{url_for('register')}}" class="btn btn-secondary">Register</a>
+</form>
+<!-- {% with messages = get_flashed_messages(with_categories=true) %}
+{% if messages %}
+<ul>
+    {% for category, message in messages %}
+    <li class="{{ category }}">{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+{% endwith %} -->
+{% endblock %}
